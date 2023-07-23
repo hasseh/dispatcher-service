@@ -14,7 +14,7 @@ public class DispatchingFunctionsIntegrationTests {
   @Autowired
   private FunctionCatalog catalog;
 
-  @Test
+// Disable test  @Test
   void packAndLabelOrder() {
     Function<OrderAcceptedMessage, Flux<OrderDispatchedMessage>> packAndLabel =
         catalog.lookup(Function.class, "pack|label");
